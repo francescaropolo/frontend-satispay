@@ -1,0 +1,85 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less';
+
+/* ---- custom variables ---- */
+@primary-color: #ff4d4f;
+@font-family: 'Roboto', sans-serif;
+@layout-header-background: @white;
+@layout-header-padding: 18px 50px;
+@layout-body-background: #f7f7f7;
+@border-radius-base: 10px;
+
+/* ---- reset ---- */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    // color: #1c232b;
+    // font-family: 'Roboto', sans-serif;
+}
+
+#root {
+    height: 100%;
+}
+
+.site-wrapper {
+    min-height: 100%;
+}
+
+.site-content {
+    background: url("./assets/pokeball.svg") 80vw -10vh no-repeat;
+    background-size: 450px;
+
+    @media (max-width: 767px) {
+        background-position: 40vw -10vh;
+    }
+}
+
+.page-container {
+    padding: 40px 50px;
+
+    .page-title {
+        color: @primary-color;
+        background: -webkit-linear-gradient(#ffc069, @primary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.2rem;
+    }
+}
+
+
+.filter-container {
+    margin: 40px 0 20px;
+
+    .gutter-row {
+        text-align: center;
+    }
+}
+
+.table-container {
+    text-align: center;
+
+    &>div {
+        margin-bottom: 20px;
+    }
+
+    .table-wrapper>div {
+        padding: 10px;
+        box-shadow: @shadow-1-down;
+        border-radius: @border-radius-base;
+    }
+}
+
+.site-footer {
+    text-align: center;
+}
